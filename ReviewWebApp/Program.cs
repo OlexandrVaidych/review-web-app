@@ -1,4 +1,10 @@
+using Microsoft.EntityFrameworkCore;
+using ReviewWebApp.Data;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<ReviewWebAppContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ReviewWebAppContext")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
