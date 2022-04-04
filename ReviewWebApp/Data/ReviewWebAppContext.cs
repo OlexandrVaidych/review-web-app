@@ -9,6 +9,6 @@ namespace ReviewWebApp.Data
         {
         }
 
-        public DbSet<ReviewWebApp.Models.Review> Review { get; set; }
+        public DbSet<ReviewWebApp.Models.User> Review { get; set; }
     }
 }
