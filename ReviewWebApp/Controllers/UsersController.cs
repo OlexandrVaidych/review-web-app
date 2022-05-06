@@ -28,7 +28,7 @@ namespace ReviewWebApp.Controllers
         {
             _context.Add(user);
             await _context.SaveChangesAsync();
-            return View();
+            return Redirect("~/Home");
         }
     }
 }
