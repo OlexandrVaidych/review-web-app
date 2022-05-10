@@ -26,9 +26,15 @@ namespace ReviewWebApp.Controllers
         [HttpPost]
         public async Task<IActionResult> Register([Bind("Id, Name, Email, Password, ConfirmPassword")] User user)
         {
-            _context.Add(user);
-            await _context.SaveChangesAsync();
-            return Redirect("~/Home");
+            if (ModelState.IsValid)
+            {
+                _context.Add(user);
+                await _context.SaveChangesAsync();
+                return Redirect("~/Home");
+            }
+
+            return View();
+
         }
     }
 }
