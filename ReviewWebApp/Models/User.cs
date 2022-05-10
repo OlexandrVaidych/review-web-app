@@ -7,10 +7,11 @@ namespace ReviewWebApp.Models
         public int Id { get; set; }
         
         [Required(ErrorMessage = "Enter a name")]
-        [StringLength(20, MinimumLength = 2, ErrorMessage = "{0} length must be between {2} and {1}.")]
+        [StringLength(20, MinimumLength = 2, ErrorMessage = "{0} length must be between {2} and {1}")]
         public string? Name { get; set; }
         
         [Required(ErrorMessage = "Enter an email")]
+        [EmailAddress] 
         public string? Email { get; set; }
 
         [Required(ErrorMessage = "Enter a password")]
