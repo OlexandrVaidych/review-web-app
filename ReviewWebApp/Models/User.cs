@@ -15,6 +15,7 @@ namespace ReviewWebApp.Models
         public string? Email { get; set; }
 
         [Required(ErrorMessage = "Enter a password")]
+        [StringLength(20, MinimumLength = 6, ErrorMessage = "{0} length must be between {2} and {1}")]
         public string? Password { get; set; }
 
         [Required(ErrorMessage = "Enter a confirm password")]
