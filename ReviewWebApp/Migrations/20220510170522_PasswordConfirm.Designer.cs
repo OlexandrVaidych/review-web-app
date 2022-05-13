@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ReviewWebApp.Data;
 
@@ -10,9 +11,10 @@ using ReviewWebApp.Data;
 namespace ReviewWebApp.Migrations
 {
     [DbContext(typeof(ReviewWebAppContext))]
-    partial class ReviewWebAppContextModelSnapshot : ModelSnapshot
+    [Migration("20220510170522_PasswordConfirm")]
+    partial class PasswordConfirm
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

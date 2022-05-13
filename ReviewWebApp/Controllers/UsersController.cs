@@ -24,7 +24,7 @@ namespace ReviewWebApp.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Register([Bind("Id, Name, Email, Password, ConfirmPassword")] User user)
+        public async Task<IActionResult> Register([Bind("Id, Name, Email, Password, PasswordConfirm")] User user)
         {
             if (ModelState.IsValid)
             {

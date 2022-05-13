@@ -18,7 +18,8 @@ namespace ReviewWebApp.Models
         [StringLength(20, MinimumLength = 6, ErrorMessage = "{0} length must be between {2} and {1}")]
         public string? Password { get; set; }
 
-        [Required(ErrorMessage = "Enter a confirm password")]
-        public string? ConfirmPassword { get; set; }
+        [Required(ErrorMessage = "Confirm password")]
+        [Compare("Password", ErrorMessage= "Passwords do not match")]
+        public string? PasswordConfirm { get; set; }
     }
 }
